@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-linen text-ink font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .paper-texture {
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(220, 184, 119, 0.10), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(122, 47, 73, 0.08), transparent 45%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal {
+    animation: none !important;
+  }
+}
